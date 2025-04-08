@@ -15,8 +15,6 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
 li,
 figure,
 figcaption,
@@ -31,11 +29,6 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-}
-
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 a:not([class]) {
@@ -83,6 +76,10 @@ body {
     width: 56%;
     margin-left: auto;
     padding: 30PX;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 }
 
@@ -96,6 +93,11 @@ body {
   background-position: center;
   background-image: url('./assets/my_photo.jpg');
   background-repeat: no-repeat;
+
+  @media (max-width: 1024px) {
+    position: static;
+    width: 100%;
+  }
 }
 
 .shadow-block {
@@ -136,8 +138,11 @@ body {
 
 .title_blue {
   font-size: 28px;
-  text-align: center;
   color: #0A66C2;
+}
+
+.section {
+  margin-bottom: 40px;
 }
 
 .icons_container {
@@ -159,14 +164,20 @@ body {
   color: #FFFFFF;
 }
 
-.f-blue {
-  color: #0A66C2;
-}
-
-.f-italic {
-  
+.f-center {
+  text-align: center;
 }
 
 .h-mb20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
+}
+
+.ul {
+  margin: 0 0 20px 40px;
+
+  list-style-type: circle;
+
+  li::marker {
+    color: #0A66C2;
+  }
 }
