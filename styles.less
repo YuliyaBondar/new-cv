@@ -69,7 +69,21 @@ select {
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  
   background-color: #181D17;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  
+  &-content {
+    width: 56%;
+    margin-left: auto;
+    padding: 30PX;
+  }
 }
 
 .aside {
@@ -95,8 +109,9 @@ body {
 
   &_bottom {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
     height: 50%;
     min-height: max-content;
     padding: 30px;
@@ -112,10 +127,24 @@ body {
   color: #FFFFFF;
 }
 
-.job-position {
+.h2 {
+  margin-bottom: 20px;
+
+  font-size: 36px;
+  color: #FFFFFF;
+}
+
+.title_blue {
   font-size: 28px;
   text-align: center;
   color: #0A66C2;
+}
+
+.icons_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 }
 
 .social-icon {
@@ -124,4 +153,20 @@ body {
 
 .social-icon:hover {
   transform: scale(1.2);
+}
+
+.f-white {
+  color: #FFFFFF;
+}
+
+.f-blue {
+  color: #0A66C2;
+}
+
+.f-italic {
+  
+}
+
+.h-mb20 {
+  margin-bottom: 20px;
 }
