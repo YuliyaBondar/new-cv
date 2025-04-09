@@ -79,10 +79,11 @@ body {
   &-content {
     width: 56%;
     margin-left: auto;
-    padding: 30PX;
+    padding: 30px;
 
     @media (max-width: 1024px) {
       width: 100%;
+      padding: 10px;
     }
   }
 }
@@ -149,9 +150,7 @@ body {
   margin-bottom: 40px;
   padding-bottom: 40px;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .icons_container {
@@ -185,6 +184,10 @@ body {
   display: flex;
   gap: 10px 20px;
   flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+  }
 }
 
 .ul {
