@@ -245,3 +245,66 @@ body {
 .border_none {
   border: none;
 }
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  width: 30%;
+
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: #FFFFFF;
+
+    .title_underline::after {
+      width: 100%;
+
+      transition: width 0.7s linear;
+    }
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 48%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.title_underline {
+  position: relative;
+
+  font-size: 20px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+    width: 70%;
+    height: 2px;
+
+    background-color: #0A66C2;
+
+    transition: width 0.7s linear;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
