@@ -81,10 +81,21 @@ body {
     margin-left: auto;
     padding: 30px;
 
+    animation: main-appear 1s linear;
+
     @media (max-width: @width-tablet-big) {
       width: 100%;
       padding: 10px;
     }
+  }
+}
+
+@keyframes main-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -99,9 +110,22 @@ body {
   background-image: url('../assets/images/my_photo.jpg');
   background-repeat: no-repeat;
 
+  animation: aside-appear 0.5s linear;
+
   @media (max-width: @width-tablet-big) {
     position: static;
     width: 100%;
+  }
+}
+
+@keyframes aside-appear {
+  from {
+    left: -999px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
   }
 }
 
@@ -157,13 +181,13 @@ body {
   }
 
   &_animated {
-    animation: appear 5s linear;
+    animation: section-appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
   }
 }
 
-@keyframes appear {
+@keyframes section-appear {
   from {
     opacity: 0;
     scale: 0.4;
