@@ -152,6 +152,10 @@ body {
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 
+  &:last-child {
+    padding-bottom: 0;
+  }
+
   &_animated {
     animation: appear 5s linear;
     animation-timeline: view();
@@ -272,42 +276,42 @@ body {
 
 .projects {
   display: flex;
-  justify-content: space-between;
-  gap: 40px 20px;
+  row-gap: 40px;
   flex-wrap: wrap;
-}
+  margin: 0 24px;
 
-.project-link {
-  width: 30%;
-
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
-
-  transition: color 0.2s linear;
-
-  &:hover {
-    color: @white-color;
-
-    .title_underline::after {
-      width: 100%;
-
-      transition: width 0.7s linear;
+  .project-link {
+    margin-right: 20px;
+  
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+  
+    transition: color 0.2s linear;
+  
+    &:hover {
+      color: @white-color;
+  
+      .title_underline::after {
+        width: 100%;
+  
+        transition: width 0.7s linear;
+      }
+    }
+  
+    img {
+      margin-bottom: 10px;
     }
   }
 
-  img {
-    margin-bottom: 10px;
-  }
-
-  @media (max-width: @width-tablet-big) {
-    width: 48%;
-  }
-
   @media (max-width: @width-tablet-small) {
-    width: 100%;
-    
-    img {
-      margin: 0 auto 10px;
+    margin: 0;
+
+    .project-link {
+      width: 100%;
+
+      img {
+        margin: 0 auto 10px;
+      }
     }
   }
 }
